@@ -55,6 +55,21 @@ nav a:hover, nav a:focus-visible { color: var(--ink); }
 .connect-card input:focus { outline: 3px solid rgba(23, 35, 29, .15); border-color: var(--ink); }
 .form-help, .status { margin: 0 0 7px; color: var(--muted); font-size: .78rem; }
 .status { min-height: 1.2em; color: #8b3c22; font-weight: 700; }
+.review-section { padding: 78px 24px 0; }
+.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.review-card { padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+.step-number { color: #56845f; font-size: .75rem; font-weight: 900; letter-spacing: .08em; }
+.review-card h3 { margin: 24px 0 8px; font-size: 1.15rem; }
+.review-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.demo-flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 20px; padding: 16px 18px; color: #45684d; background: var(--mint); border-radius: 10px; font-size: .88rem; }
+.demo-flow strong { color: var(--ink); }
+.legal { max-width: 760px; margin: 70px auto 110px; padding: 0 24px; }
+.legal h1 { margin: 18px 0 35px; font-size: clamp(2.8rem, 8vw, 4.5rem); line-height: .95; letter-spacing: -.07em; }
+.legal h2 { margin: 38px 0 5px; font-size: 1.35rem; }
+.legal p { color: var(--muted); }
+.callback { max-width: 640px; margin: 18vh auto; padding: 24px; }
+.callback h1 { font-size: clamp(2.7rem, 8vw, 4rem); line-height: .95; letter-spacing: -.07em; }
+.callback p:not(.eyebrow) { color: var(--muted); }
 .help-strip { display: flex; gap: 16px; align-items: center; margin: 70px 24px; padding: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .help-icon { display: grid; flex: 0 0 35px; width: 35px; height: 35px; place-items: center; border: 2px solid var(--ink); border-radius: 50%; font-weight: 800; }
 .help-strip h2 { margin: 0; font-size: 1.05rem; }
@@ -68,9 +83,10 @@ nav a:hover, nav a:focus-visible { color: var(--ink); }
   .site-header nav { gap: 12px; }
   .hero { padding-top: 48px; padding-bottom: 60px; }
   .hero h1 { font-size: clamp(3.1rem, 16vw, 5rem); }
-  .account-grid, .connect-card { grid-template-columns: 1fr; }
+  .account-grid, .connect-card, .review-grid { grid-template-columns: 1fr; }
   .connect-card { gap: 30px; padding: 28px 22px; }
   .connect-card h2 { font-size: 2.35rem; }
+  .review-section { padding-top: 58px; }
   .help-strip, .site-footer { align-items: flex-start; flex-wrap: wrap; }
   .text-link { margin-left: 51px; }
 }
