@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gülümseyelim helps communities discover and share positive moments with TikTok.">
+    <title>Gülümseyelim | Share a little joy</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Gülümseyelim home">gülümseyelim<span>●</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#tiktok-connect">TikTok connection</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">A kinder corner of the internet</p>
+        <h1>Share a little joy.</h1>
+        <p class="lead">Gülümseyelim is a community space for discovering uplifting TikTok videos and celebrating the people who make us smile.</p>
+        <a class="button button-primary" href="#tiktok-connect">Connect TikTok</a>
+      </section>
+
+      <section class="features" aria-label="What Gülümseyelim offers">
+        <article><span class="icon" aria-hidden="true">✦</span><h2>Discover</h2><p>Find positive moments from creators you choose to follow.</p></article>
+        <article><span class="icon" aria-hidden="true">↗</span><h2>Share safely</h2><p>We request only the TikTok information needed to provide this experience.</p></article>
+        <article><span class="icon" aria-hidden="true">♥</span><h2>Stay in control</h2><p>Disconnect at any time and request deletion of your connected data.</p></article>
+      </section>
+
+      <section id="tiktok-connect" class="connect-card" aria-labelledby="connect-title">
+        <div>
+          <p class="eyebrow">TikTok integration</p>
+          <h2 id="connect-title">Bring your TikTok profile to Gülümseyelim</h2>
+          <p>Connect with TikTok to let Gülümseyelim show your basic profile and public videos. Your TikTok password is never shared with us.</p>
+        </div>
+        <form id="tiktok-form">
+          <label for="client-key">TikTok client key</label>
+          <input id="client-key" name="client-key" autocomplete="off" placeholder="Enter your approved client key" required>
+          <label for="redirect-uri">Redirect URI</label>
+          <input id="redirect-uri" name="redirect-uri" readonly>
+          <p class="form-help">Use this exact HTTPS URL in TikTok Developer Portal → Login Kit → Redirect URI.</p>
+          <button class="button button-dark" type="submit">Continue with TikTok</button>
+          <p id="connect-status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Gülümseyelim. Made for sharing good moments.</p>
+      <nav aria-label="Legal navigation"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
