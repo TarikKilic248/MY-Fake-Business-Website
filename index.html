@@ -1,57 +1,98 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Gülümseyelim helps communities discover and share positive moments with TikTok.">
-    <title>Gülümseyelim | Share a little joy</title>
+    <meta name="description" content="Gülümseyelim işletmenizin Facebook ve TikTok hesaplarını kolayca yönetmenize yardımcı olur.">
+    <title>Gülümseyelim | İşletme ayarları</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Gülümseyelim home">gülümseyelim<span>●</span></a>
-      <nav aria-label="Primary navigation">
-        <a href="#tiktok-connect">TikTok connection</a>
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
+      <a class="brand" href="index.html" aria-label="Gülümseyelim ana sayfa">
+        <span class="brand-mark">☺</span>
+        <span>gülümseyelim</span>
+      </a>
+      <nav aria-label="Ana menü">
+        <a href="#hesaplar">Hesaplar</a>
+        <a href="#destek">Destek</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">A kinder corner of the internet</p>
-        <h1>Share a little joy.</h1>
-        <p class="lead">Gülümseyelim is a community space for discovering uplifting TikTok videos and celebrating the people who make us smile.</p>
-        <a class="button button-primary" href="#tiktok-connect">Connect TikTok</a>
+        <p class="eyebrow">Yozgat'tan, kolayca</p>
+        <h1>İşletmen<br>internette<br>gülümsesin.</h1>
+        <p class="lead">Facebook ve TikTok işletme hesaplarını tek yerden bağla. Karmaşık ayarlar yok, telefonda kolay kullanım var.</p>
+        <a class="button button-primary" href="#hesaplar">Hesaplarıma bak</a>
       </section>
 
-      <section class="features" aria-label="What Gülümseyelim offers">
-        <article><span class="icon" aria-hidden="true">✦</span><h2>Discover</h2><p>Find positive moments from creators you choose to follow.</p></article>
-        <article><span class="icon" aria-hidden="true">↗</span><h2>Share safely</h2><p>We request only the TikTok information needed to provide this experience.</p></article>
-        <article><span class="icon" aria-hidden="true">♥</span><h2>Stay in control</h2><p>Disconnect at any time and request deletion of your connected data.</p></article>
+      <section id="hesaplar" class="accounts" aria-labelledby="accounts-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Sosyal hesaplar</p>
+            <h2 id="accounts-title">Hesaplarını bağla</h2>
+          </div>
+          <span class="account-count">2 platform</span>
+        </div>
+
+        <div class="account-grid">
+          <article class="account-card facebook-card">
+            <div class="platform-icon facebook-icon" aria-hidden="true">f</div>
+            <div class="account-content">
+              <p class="platform-name">Facebook</p>
+              <h3>İşletme sayfanı yönet</h3>
+              <p>Sayfa bilgilerini ve paylaşımlarını tek yerden takip et.</p>
+              <a class="button button-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook'u aç <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="account-card tiktok-card" id="tiktok-connect">
+            <div class="platform-icon tiktok-icon" aria-hidden="true">♪</div>
+            <div class="account-content">
+              <p class="platform-name">TikTok</p>
+              <h3>Videolarını paylaş</h3>
+              <p>Profilini bağla, herkese açık videolarını burada gör.</p>
+              <a class="button button-tiktok" href="#tiktok-form">TikTok'u bağla <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="tiktok-connect" class="connect-card" aria-labelledby="connect-title">
-        <div>
-          <p class="eyebrow">TikTok integration</p>
-          <h2 id="connect-title">Bring your TikTok profile to Gülümseyelim</h2>
-          <p>Connect with TikTok to let Gülümseyelim show your basic profile and public videos. Your TikTok password is never shared with us.</p>
+      <section class="connect-card" aria-labelledby="connect-title">
+        <div class="connect-intro">
+          <p class="eyebrow">TikTok bağlantısı</p>
+          <h2 id="connect-title">Bir dakikada hazır.</h2>
+          <p>TikTok geliştirici uygulamandan aldığın anahtarı yaz. Şifreni biz görmeyiz.</p>
+          <ul class="check-list">
+            <li>Telefonunda hızlı açılır</li>
+            <li>Şifren burada tutulmaz</li>
+          </ul>
         </div>
         <form id="tiktok-form">
-          <label for="client-key">TikTok client key</label>
-          <input id="client-key" name="client-key" autocomplete="off" placeholder="Enter your approved client key" required>
-          <label for="redirect-uri">Redirect URI</label>
+          <label for="client-key">TikTok uygulama anahtarı</label>
+          <input id="client-key" name="client-key" autocomplete="off" placeholder="Örn. aw123456" required>
+          <label for="redirect-uri">Geri dönüş adresi</label>
           <input id="redirect-uri" name="redirect-uri" readonly>
-          <p class="form-help">Use this exact HTTPS URL in TikTok Developer Portal → Login Kit → Redirect URI.</p>
-          <button class="button button-dark" type="submit">Continue with TikTok</button>
+          <p class="form-help">Bu adres TikTok Developer Portal'da kayıtlı olmalıdır.</p>
+          <button class="button button-dark" type="submit">TikTok ile devam et <span aria-hidden="true">→</span></button>
           <p id="connect-status" class="status" role="status" aria-live="polite"></p>
         </form>
+      </section>
+
+      <section id="destek" class="help-strip" aria-label="Destek">
+        <span class="help-icon" aria-hidden="true">?</span>
+        <div>
+          <h2>Bir yerde takıldın mı?</h2>
+          <p>Hesap ayarları için bize ulaş, birlikte çözelim.</p>
+        </div>
+        <a class="text-link" href="mailto:merhaba@gulumseyelim.example">Bize yaz <span aria-hidden="true">→</span></a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Gülümseyelim. Made for sharing good moments.</p>
-      <nav aria-label="Legal navigation"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+      <p>© 2026 Gülümseyelim · Yozgat</p>
+      <nav aria-label="Yasal bilgiler"><a href="terms.html">Kullanım</a><a href="privacy.html">Gizlilik</a></nav>
     </footer>
     <script src="script.js"></script>
   </body>

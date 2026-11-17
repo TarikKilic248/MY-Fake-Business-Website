@@ -10,11 +10,11 @@
     event.preventDefault();
     const clientKey = document.querySelector("#client-key").value.trim();
     if (!clientKey) {
-      status.textContent = "Enter the client key from your TikTok Developer app.";
+      status.textContent = "TikTok uygulama anahtarını yazmalısın.";
       return;
     }
 
-    const state = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
+    const state = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : String(Date.now());
     sessionStorage.setItem("tiktok_oauth_state", state);
     const params = new URLSearchParams({
       client_key: clientKey,
