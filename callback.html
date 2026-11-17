@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TikTok connection | Gülümseyelim</title><link rel="stylesheet" href="styles.css"></head>
+  <body>
+    <main class="callback">
+      <p class="eyebrow">TikTok connection</p><h1>Authorization received</h1>
+      <p id="callback-message">Checking the authorization response…</p>
+      <a class="button button-primary" href="index.html">Return to Gülümseyelim</a>
+    </main>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const message = document.querySelector("#callback-message");
+      const expected = sessionStorage.getItem("tiktok_oauth_state");
+      if (params.get("error")) message.textContent = "TikTok did not grant access. You can return and try again.";
+      else if (!params.get("code") || !expected || params.get("state") !== expected) message.textContent = "The authorization response could not be verified. Please start again.";
+      else message.textContent = "TikTok authorization succeeded. A secure server must now exchange this code for tokens; no client secret is used in this page.";
+      sessionStorage.removeItem("tiktok_oauth_state");
+    </script>
+  </body>
+</html>
